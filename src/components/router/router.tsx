@@ -13,7 +13,7 @@ export const Router: React.FC = () => {
         <Route index element={<Home />} />
         <Route path="/animals" element={<Animals />} />
         <Route path="/species" element={<Species />} />
-        <Route path="/enclosure" element={<Enclosures />} />
+        <Route path="/enclosures" element={<Enclosures />} />
       </Route>
     </Routes>
   );

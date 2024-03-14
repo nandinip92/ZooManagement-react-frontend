@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.josefin-sans-regular-italic {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.zooHeader {
+  /* border: 0.25rem solid orange; */
+  padding: 0.25rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--deep-black-color);
+}
+.zooHeader__title {
+  font-size: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.navbar {
+  text-align: center;
+}
+.navbar-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  font-family: poppins;
+  font-weight: 700;
+
+  font-size: 2rem;
+}
+
+.linkInActive {
+  color: var(--light-color);
+}
+.linkActive {
+  font-size: 2.2rem;
+  color: var(--yellow-color);
+}
+
+.linkActive:hover,
+.linkInActive:hover {
+  background-color: orange;
+  color: var(--voilet-color);
+}

@@ -1,5 +1,14 @@
 import React from "react";
+import { Header } from "../header/header";
+import { Outlet } from "react-router-dom";
 
 export const MainLayout: React.FC = () => {
-  return <></>;
+  return (
+    <>
+      <Header />
+      <main className="mysterious-zoo">
+        <Outlet />
+      </main>
+    </>
+  );
 };

@@ -1,5 +1,9 @@
 import React from "react";
 
 export const Home: React.FC = () => {
-  return <></>;
+  return (
+    <>
+      <h1>Welcome To Mysterious Zoo</h1>
+    </>
+  );
 };
