@@ -1,7 +1,8 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* left:0; */
+  /* padding: 1rem 0 2rem 0; */
   text-align: center;
   box-sizing: border-box;
   --light-color: #aefd6c;
@@ -13,10 +14,11 @@
   --deep-black-color: #050203;
   --navy: #0d3b66;
   /* --light: #faf0ca; */
-  --light: #FBEED0;
+  --form-color: #FBEED0;
   --yellow: #f4d35e;
   --orange: #ee964b;
   --red: #f95738;
   --pink-brown: #87314e;
   --bright-pink-brown: #df405a;
 }
+

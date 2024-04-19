@@ -15,35 +15,28 @@
   right: 0;
   background-color: var(--deep-black-color);
 }
-.zooHeader__title {
-  font-size: 4rem;
-  font-family: "Josefin Sans", sans-serif;
+.BAR {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.HAMBURGER-ICON.active .BAR:nth-child(2) {
+  opacity: 0;
+}
+.HAMBURGER-ICON.active .BAR:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.HAMBURGER-ICON.active .BAR:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
-.navbar {
-  text-align: center;
-}
-.navbar-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  font-family: poppins;
-  font-weight: 700;
-
-  font-size: 2rem;
+.hideNavMenu {
+  display: none;
 }
 
-.linkInActive {
-  color: var(--light-color);
-}
-.linkActive {
-  font-size: 2.2rem;
-  color: var(--yellow-color);
-}
-
-.linkActive:hover,
-.linkInActive:hover {
-  background-color: orange;
-  color: var(--voilet-color);
+.showNavMenu {
+  display: block;
 }
