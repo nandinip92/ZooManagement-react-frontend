@@ -7,6 +7,7 @@ export const MainLayout: React.FC = () => {
     <>
       <Header />
 
+      {/* <main className="border-2 border-indigo-600"> */}
       <main>
         <Outlet />
       </main>
