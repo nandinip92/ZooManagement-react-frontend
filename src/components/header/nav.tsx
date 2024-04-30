@@ -12,6 +12,9 @@ export const Nav: React.FC = () => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+  const closeMenuOnMobile = () => {
+    setShowMenu(false);
+  };
   return (
     <>
       <NavLink to="/">
@@ -27,16 +30,8 @@ export const Nav: React.FC = () => {
           </h3>
         </div>
       </NavLink>
-      <nav className="border-2 border-indigo-600">
+      <nav className="border-2 border-indigo-600 justify-end">
         <section className="MOBILE-MENU flex lg:hidden">
-          <div
-            className={`HAMBURGER-ICON ${showMenu ? "active" : ""} space-y-1`}
-            onClick={toggleMenu}
-          >
-            <span className="BAR block h-1 w-8 bg-dark"></span>
-            <span className="BAR block h-1 w-8 bg-dark"></span>
-            <span className="BAR block h-1 w-8 bg-dark"></span>
-          </div>
           <div className={showMenu ? "showNavMenu" : "hideNavMenu"}>
             <ul className="NAVIGATION-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
               {menuItems.map(({ name, path }) => (
@@ -46,12 +41,21 @@ export const Nav: React.FC = () => {
                     className={({ isActive }) =>
                       isActive ? "linkActive" : "linkInactive"
                     }
+                    onClick={closeMenuOnMobile}
                   >
                     {name}
                   </NavLink>
                 </li>
               ))}
             </ul>
+          </div>
+          <div
+            className={`HAMBURGER-ICON ${showMenu ? "active" : ""} space-y-1`}
+            onClick={toggleMenu}
+          >
+            <span className="BAR block h-1 w-8 bg-dark"></span>
+            <span className="BAR block h-1 w-8 bg-dark"></span>
+            <span className="BAR block h-1 w-8 bg-dark"></span>
           </div>
         </section>
 
