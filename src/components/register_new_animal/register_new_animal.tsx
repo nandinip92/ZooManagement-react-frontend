@@ -1,22 +1,22 @@
-import React, { FormEvent, useState } from "react";
-import "./styles.css";
+import React, { FormEvent, useState } from "react"
+import "./styles.css"
 
 export const RegisterNewAnimal: React.FC = () => {
-  const [animalName, setAnimalName] = useState<string>("");
-  const [speciesId, setSpeciesId] = useState<number>(-19);
-  const [sex, setSex] = useState<number>();
-  const [dob, setDob] = useState(new Date());
-  const [dateOfAcquisition, setDateOfAcquisition] = useState(new Date());
+  const [animalName, setAnimalName] = useState<string>("")
+  const [speciesId, setSpeciesId] = useState<number>(-19)
+  const [sex, setSex] = useState<number>()
+  const [dob, setDob] = useState(new Date())
+  const [dateOfAcquisition, setDateOfAcquisition] = useState(new Date())
 
   const resetAllFields = () => {
-    setAnimalName("");
-    setSpeciesId(-19);
-    setSex(undefined);
-  };
+    setAnimalName("")
+    setSpeciesId(-19)
+    setSex(undefined)
+  }
   const submitAnimal = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const formData = new FormData(event.target as HTMLFormElement);
-    console.log(JSON.stringify(Object.fromEntries(formData)));
+    event.preventDefault()
+    const formData = new FormData(event.target as HTMLFormElement)
+    console.log(JSON.stringify(Object.fromEntries(formData)))
 
     fetch("http://localhost:5039/animals", {
       method: "POST",
@@ -31,13 +31,13 @@ export const RegisterNewAnimal: React.FC = () => {
         dateOfAcquisition,
       }),
     }).then((response) => {
-      console.log(response.json());
+      console.log(response.json())
       if (response.ok) {
-        (event.target as HTMLFormElement).reset();
-        resetAllFields();
+        ;(event.target as HTMLFormElement).reset()
+        resetAllFields()
       }
-    });
-  };
+    })
+  }
 
   return (
     <div className="form-container">
@@ -103,5 +103,5 @@ export const RegisterNewAnimal: React.FC = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}

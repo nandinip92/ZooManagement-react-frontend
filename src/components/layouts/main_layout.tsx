@@ -1,6 +1,6 @@
-import React from "react";
-import { Header } from "../header/header";
-import { Outlet } from "react-router-dom";
+import React from "react"
+import { Header } from "../header/header"
+import { Outlet } from "react-router-dom"
 
 export const MainLayout: React.FC = () => {
   return (
@@ -21,5 +21,5 @@ export const MainLayout: React.FC = () => {
     //     <Outlet />
     //   </main>
     // </div>
-  );
-};
+  )
+}

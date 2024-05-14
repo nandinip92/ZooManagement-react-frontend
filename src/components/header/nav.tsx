@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react"
+import { NavLink } from "react-router-dom"
 export const Nav: React.FC = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false)
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Animals", path: "/animals" },
     { name: "Species", path: "/species" },
     { name: "Enclosures", path: "/enclosures" },
-  ];
+  ]
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
+    setShowMenu(!showMenu)
+  }
   const closeMenuOnMobile = () => {
-    setShowMenu(false);
-  };
+    setShowMenu(false)
+  }
   return (
     <>
       <NavLink to="/">
@@ -75,8 +75,8 @@ export const Nav: React.FC = () => {
         </ul>
       </nav>
     </>
-  );
-};
+  )
+}
 
 // return (
 //   <>
