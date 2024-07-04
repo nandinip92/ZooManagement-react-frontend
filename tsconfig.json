@@ -21,19 +21,22 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
+    "types": ["vite/client"],
+
     /*paths*/
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"],
+      "@assets/*":["./assets/*"],
       "@api/*": ["./api/*"],
       "@components/*": ["./components/*"],
       "@type/*": ["./types/*"],
       "@models/*": ["./models/*"],
       "@requests/*": ["./models/request/*"],
       "@views/*": ["./models/view/*"],
-      "@speciesImages/*": ["./assets/Images/*"]
     }
   },
+
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
