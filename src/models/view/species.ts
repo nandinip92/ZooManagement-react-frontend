@@ -1,8 +1,12 @@
 import Enclosure from "./enclosure"
 
-interface Species {
+export interface Species {
   speciesId: number
   speciesName: string
   Enclosure: Enclosure
 }
-export default Species
+
+export interface SpeciesList{
+  speciesList:Array<Species>
+}
+
