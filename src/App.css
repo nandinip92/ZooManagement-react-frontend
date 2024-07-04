@@ -22,3 +22,14 @@
   --bright-pink-brown: #df405a;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 120px 10px 10px;
+  text-align: center;
+}
+
